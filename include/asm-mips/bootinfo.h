@@ -212,6 +212,13 @@
 #define MACH_GROUP_NEC_EMMA2RH 25	/* NEC EMMA2RH (was 23)		*/
 #define  MACH_NEC_MARKEINS	0	/* NEC EMMA2RH Mark-eins	*/
 
+/*
+ * Valid machtype for group ATHEROS
+ */
+#define MACH_GROUP_ATHEROS	26
+#define MACH_ATHEROS_AR5312	0	/* Atheros AR5312, AR2312/3/4	*/
+#define MACH_ATHEROS_AR5315	1	/* Atheros AR2315/6/7/8		*/
+
 #define CL_SIZE			COMMAND_LINE_SIZE
 
 const char *get_system_type(void);

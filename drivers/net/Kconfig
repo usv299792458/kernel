@@ -190,6 +190,12 @@ config MII
 
 source "drivers/net/arm/Kconfig"
 
+config AR2313
+	tristate "AR2313 Ethernet support"
+	depends on NET_ETHERNET && ATHEROS
+	help
+	  Support for the AR231x/531x ethernet controller
+
 config MACE
 	tristate "MACE (Power Mac ethernet) support"
 	depends on NET_ETHERNET && PPC_PMAC && PPC32

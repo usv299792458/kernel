@@ -9,6 +9,7 @@ obj-$(CONFIG_CHELSIO_T1) += chelsio/
 obj-$(CONFIG_EHEA) += ehea/
 obj-$(CONFIG_BONDING) += bonding/
 obj-$(CONFIG_GIANFAR) += gianfar_driver.o
+obj-$(CONFIG_AR2313) += ar2313/
 
 gianfar_driver-objs := gianfar.o \
 		gianfar_ethtool.o \
