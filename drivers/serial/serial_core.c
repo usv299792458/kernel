@@ -2182,6 +2182,7 @@ int uart_register_driver(struct uart_driver *drv)
 
 	normal->owner		= drv->owner;
 	normal->driver_name	= drv->driver_name;
+	normal->devfs_name	= drv->devfs_name;
 	normal->name		= drv->dev_name;
 	normal->major		= drv->major;
 	normal->minor_start	= drv->minor;
@@ -2189,7 +2190,7 @@ int uart_register_driver(struct uart_driver *drv)
 	normal->subtype		= SERIAL_TYPE_NORMAL;
 	normal->init_termios	= tty_std_termios;
 	normal->init_termios.c_cflag = B9600 | CS8 | CREAD | HUPCL | CLOCAL;
-	normal->flags		= TTY_DRIVER_REAL_RAW | TTY_DRIVER_DYNAMIC_DEV;
+	normal->flags		= TTY_DRIVER_REAL_RAW | TTY_DRIVER_NO_DEVFS;
 	normal->driver_state    = drv;
 	tty_set_operations(normal, &uart_ops);
 
