@@ -381,7 +381,7 @@ void get_src_version(const char *modname, char sum[], unsigned sumlen)
 	struct md4_ctx md;
 	char *sources, *end, *fname;
 	const char *basename;
-	char filelist[PATH_MAX + 1];
+	char filelist[4096 + 1];
 	char *modverdir = getenv("MODVERDIR");
 
 	if (!modverdir)
